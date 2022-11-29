@@ -9,19 +9,31 @@ public class Main {
         Player player2 = new Player("O", pole);
         Player playerVin = null;
 
-        for(int i = 0; i < pole.getSize()* pole.getSize()/2; i++) {
-            player1.movePlayer();
-            player2.movePlayer();
-            if(i >= 1) {
-                playerVin = EndGame.endGame(pole, player1, player2);
-                if(playerVin != null) {
-                    System.out.println("Победитель игры игрок: " + playerVin.getName());
-                    break;
+        for(int i = 0; i < pole.getSize()* pole.getSize(); i++) {
+            if(i % 2 == 0) {
+                player1.movePlayer();
+                if(i >= 1) {
+                    playerVin = EndGame.endGame(pole, player1, player2);
+                    if(playerVin != null) {
+                        System.out.println("Победитель игры игрок: " + playerVin.getName());
+                        break;
+                    }
+                }
+            } else {
+                player2.movePlayer();
+                if(i >= 1) {
+                    playerVin = EndGame.endGame(pole, player1, player2);
+                    if(playerVin != null) {
+                        System.out.println("Победитель игры игрок: " + playerVin.getName());
+                        break;
+                    }
                 }
             }
+
         }
 
         if(playerVin == null) System.out.println("Ничья");
 
     }
+
 }

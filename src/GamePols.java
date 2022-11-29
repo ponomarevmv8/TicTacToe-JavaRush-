@@ -3,7 +3,6 @@ public class GamePols {
     private int size = 3;
     private String[][] pole;
 
-
     public GamePols(){
         inicPole();
     }
@@ -28,8 +27,6 @@ public class GamePols {
             System.out.println();
         }
     }
-
-
 
     public String[][] getPole() {
         return this.pole;
