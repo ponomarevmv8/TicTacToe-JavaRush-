@@ -18,7 +18,7 @@ public class GameMainMenu {
                     case 2: {
                         return 2;
                     } default:
-                        System.out.print("Pleaser choose punk for menu:  ");
+                        System.out.print("Pleaser choose punk for menu:");
                 }
             } else {
                 System.out.print("Пожалуйста выберите пункт из меню: ");
